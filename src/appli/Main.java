@@ -16,7 +16,7 @@ public  class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/vue/Vue_Globale.fxml"));
         Parent root = loader.load();
         primaryStage.setTitle("Collection Joueur de Football");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setScene(new Scene(root, 1000, 400));
         primaryStage.show();
 
     }
