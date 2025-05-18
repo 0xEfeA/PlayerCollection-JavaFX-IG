@@ -1,0 +1,11 @@
+
+.bouton {
+    -fx-background-color: #cccccc;
+    -fx-text-fill: Black;
+    -fx-background-radius: 13px;
+    -fx-padding: 6px 10px;
+}
+
+.bouton:hover {
+    -fx-background-color: #b8b8b8;
+}
