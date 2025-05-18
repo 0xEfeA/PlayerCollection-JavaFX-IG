@@ -8,12 +8,14 @@ public class Joueur {
    private String lien_transfermakt;
    private String nom;
    private String prenom;
-   private LocalDate date_naissance;
+   private String date_naissance;
+   private int age;
    private String nationalite;
    private String position;
    private String club;
+   private String image;
 
-    public Joueur(String nom, String prenom, LocalDate date_naissance, String nationalite, String position, String club,String lien, Set<String> motcles) {
+    public Joueur(String nom, String prenom, String date_naissance, String nationalite, String position, String club,String lien, Set<String> motcles, String image, int age) {
         this.nom = nom;
         this.prenom = prenom;
         this.date_naissance = date_naissance;
@@ -22,13 +24,15 @@ public class Joueur {
         this.club = club;
         this.lien_transfermakt = lien;
         this.motcles = motcles;
+        this.image = image;
+        this.age = age;
     }
    public Set<String> getMotcles() {
         return motcles;
     }
 
    public int getAge() {
-        return LocalDate.now().getYear() - date_naissance.getYear();
+        return age;
     }
    public String getNom() {
         return nom;
@@ -47,5 +51,11 @@ public class Joueur {
     }
    public String getLien_transfermakt() {
         return lien_transfermakt;
+    }
+    public String getImage() {
+        return image;
+    }
+    public String getDate_naissance() {
+        return date_naissance;
     }
 }
