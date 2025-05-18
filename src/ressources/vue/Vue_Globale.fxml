@@ -9,7 +9,7 @@
 
 <VBox prefHeight="600.0" prefWidth="400.0" style="-fx-alignment: center;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueGlobaleController">
    <children>
-      <HBox prefHeight="40.0" prefWidth="400.0" spacing="90.0" style="-fx-background-color: Grey; -fx-alignment: Center;" VBox.vgrow="ALWAYS">
+      <HBox id="VueEdition" prefHeight="40.0" prefWidth="400.0" spacing="90.0" style="-fx-background-color: Grey; -fx-alignment: Center;" VBox.vgrow="ALWAYS">
          <children>
             <Button id="boutonAjouter" mnemonicParsing="false" styleClass="bouton" stylesheets="@../style.css" text="Ajouter" textAlignment="CENTER" />
             <Button id="boutonEdition" mnemonicParsing="false" styleClass="bouton" stylesheets="@../style.css" text="Edition" />
@@ -20,6 +20,6 @@
          </padding>
       </HBox>
       <ListView id="Vueitem" prefHeight="479.0" prefWidth="400.0" VBox.vgrow="ALWAYS" />
-      <HBox prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: Grey;" VBox.vgrow="ALWAYS" />
+      <HBox id="VueRecherche" prefHeight="40.0" prefWidth="400.0" style="-fx-background-color: Grey;" VBox.vgrow="ALWAYS" />
    </children>
 </VBox>

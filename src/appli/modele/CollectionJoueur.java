@@ -24,7 +24,7 @@ public class CollectionJoueur {
      * Ajoute le joueur si il n'existe pas encore
      * @param joueur
      */
-    void ajouterJoueur(Joueur joueur) {
+    public void ajouterJoueur(Joueur joueur) {
         boolean joueurExiste = false;
         for (Joueur j : joueurList){
             if(j.getNom().equals(joueur.getNom()) && j.getPrenom().equals(joueur.getPrenom())){
@@ -44,7 +44,7 @@ public class CollectionJoueur {
      * Supprime le joueur et ses mot clés s'ils ne sont associés qu'à lui
      * @param joueur
      */
-    void supprimerJoueur(Joueur joueur) {
+  public   void supprimerJoueur(Joueur joueur) {
         joueurList.remove(joueur);
         for (String mot : joueur.getMotcles()) {
             boolean motAutreJoueur = false;
@@ -59,8 +59,19 @@ public class CollectionJoueur {
             }
         }
     }
-    int getNbJoueurs() {
+  public  int getNbJoueurs() {
         return joueurList.size();
+    }
+
+    @Override
+    public String toString(){
+      StringBuilder sb = new StringBuilder();
+      sb.append("Collection de joueurs : \n");
+      for (Joueur j : joueurList){
+          sb.append(j.getPrenom()).append(" ").append(j.getNom()).append(": ").append(j.getMotcles()).append(j.getLien_transfermakt()).append(" ").append("/").append(j.getImage()).append(" ").append(j.getAge()).append(" ").append(j.getNationalite()).append(" ").append(j.getPosition()).append(" ").append(j.getClub());
+          sb.append("\n");
+      }
+      return sb.toString();
     }
 
 }
