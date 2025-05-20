@@ -1,11 +1,45 @@
 
 .bouton {
-    -fx-background-color: #cccccc;
+    -fx-background-color: #d3d2d2;
     -fx-text-fill: Black;
     -fx-background-radius: 13px;
     -fx-padding: 6px 10px;
 }
 
 .bouton:hover {
-    -fx-background-color: #b8b8b8;
+    -fx-background-color: #b8b5b5;
+}
+.vueEdition{
+    -fx-background-color: #e4e3e3;
+    -fx-padding: 8px 12px;
+    -fx-spacing: 8px;
+    -fx-alignment: center;
+
+}
+.vueRecherche {
+    -fx-background-color: #e0dfdf;
+    -fx-padding: 8px 12px;
+    -fx-spacing: 8px;
+    -fx-alignment: center-left;
+}
+
+.rechercheText:hover {
+    -fx-background-color: #b4b1b1;
+}
+
+.rechercheImage {
+    -fx-opacity: 0.6;
+    -fx-fit-width: 16px;
+    -fx-fit-height: 16px;
+
+}
+
+ .rechercheText {
+    -fx-background-color: #e0dfdf;
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+    -fx-prompt-text-fill: #858383;
+    -fx-text-fill: #343434;
+    -fx-font-style: italic;
+    -fx-padding: 0;
 }
