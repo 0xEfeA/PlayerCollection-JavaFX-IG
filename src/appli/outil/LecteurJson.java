@@ -49,7 +49,7 @@ public class LecteurJson {
              String lien = objet.getString("lien_transfermarkt");
              String image = objet.getString("image");
              int age = objet.getInt("age");
-             Set<String> motcles= new HashSet<String>();
+             Set<String> motcles= new HashSet<>();
              objet.getJSONArray("motcles").forEach(motcle -> motcles.add(motcle.toString()));
 
              Joueur joueur = new Joueur(nom, prenom, date_naissance, nationalite, position, club, lien, motcles, image, age);

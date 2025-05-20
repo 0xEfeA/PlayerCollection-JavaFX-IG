@@ -1,0 +1,467 @@
+[
+  {
+    "nom": "Mbappé",
+    "prenom": "Kylian",
+    "date_naissance": "1998-12-20",
+    "nationalite": "France",
+    "position": "Attaquant",
+    "club": "Paris SG",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/kylian-mbappe/profil/spieler/342229",
+    "motcles": [
+      "rapide",
+      "buteur"
+    ],
+    "image": "/image/joueur/mbappe.png",
+    "age": 25
+  },
+  {
+    "nom": "Messi",
+    "prenom": "Lionel",
+    "date_naissance": "1987-06-24",
+    "nationalite": "Argentine",
+    "position": "Ailier",
+    "club": "Inter Miami",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/lionel-messi/profil/spieler/28003",
+    "motcles": [
+      "dribbleur",
+      "créatif"
+    ],
+    "image": "/image/joueur/messi.png",
+    "age": 37
+  },
+  {
+    "nom": "Ronaldo",
+    "prenom": "Cristiano",
+    "date_naissance": "1985-02-05",
+    "nationalite": "Portugal",
+    "position": "Attaquant",
+    "club": "Al-Nassr",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/cristiano-ronaldo/profil/spieler/8198",
+    "motcles": [
+      "buteur",
+      "puissant"
+    ],
+    "image": "/image/joueur/ronaldo.png",
+    "age": 40
+  },
+  {
+    "nom": "Neymar",
+    "prenom": "Junior",
+    "date_naissance": "1992-02-05",
+    "nationalite": "Brésil",
+    "position": "Ailier",
+    "club": "Al-Hilal",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/neymar-jr/profil/spieler/68290",
+    "motcles": [
+      "technique",
+      "dribbleur"
+    ],
+    "image": "/image/joueur/neymar.png",
+    "age": 31
+  },
+  {
+    "nom": "Salah",
+    "prenom": "Mohamed",
+    "date_naissance": "1992-06-15",
+    "nationalite": "Égypte",
+    "position": "Ailier",
+    "club": "Liverpool",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/mohamed-salah/profil/spieler/148455",
+    "motcles": [
+      "rapide",
+      "dribbleur"
+    ],
+    "image": "/image/joueur/salah.png",
+    "age": 32
+  },
+  {
+    "nom": "Lewandowski",
+    "prenom": "Robert",
+    "date_naissance": "1988-08-21",
+    "nationalite": "Pologne",
+    "position": "Attaquant",
+    "club": "Barcelona",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/robert-lewandowski/profil/spieler/76543",
+    "motcles": [
+      "buteur",
+      "positionnement"
+    ],
+    "image": "/image/joueur/lewandowski.png",
+    "age": 36
+  },
+  {
+    "nom": "Modric",
+    "prenom": "Luka",
+    "date_naissance": "1985-09-09",
+    "nationalite": "Croatie",
+    "position": "Milieu",
+    "club": "Real Madrid",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/luka-modric/profil/spieler/10218",
+    "motcles": [
+      "créatif",
+      "passeur"
+    ],
+    "image": "/image/joueur/modric.png",
+    "age": 39
+  },
+  {
+    "nom": "De Bruyne",
+    "prenom": "Kevin",
+    "date_naissance": "1991-06-28",
+    "nationalite": "Belgique",
+    "position": "Milieu",
+    "club": "Manchester City",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/kevin-de-bruyne/profil/spieler/88755",
+    "motcles": [
+      "passeur",
+      "vision"
+    ],
+    "image": "/image/joueur/debruyne.png",
+    "age": 33
+  },
+  {
+    "nom": "Kane",
+    "prenom": "Harry",
+    "date_naissance": "1993-07-28",
+    "nationalite": "Angleterre",
+    "position": "Attaquant",
+    "club": "Bayern Munich",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/harry-kane/profil/spieler/132098",
+    "motcles": [
+      "buteur",
+      "placement"
+    ],
+    "image": "/image/joueur/kane.png",
+    "age": 31
+  },
+  {
+    "nom": "Haaland",
+    "prenom": "Erling",
+    "date_naissance": "2000-07-21",
+    "nationalite": "Norvège",
+    "position": "Attaquant",
+    "club": "Manchester City",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/erling-haaland/profil/spieler/418950",
+    "motcles": [
+      "buteur",
+      "physique"
+    ],
+    "image": "/image/joueur/haaland.png",
+    "age": 24
+  },
+  {
+    "nom": "Benzema",
+    "prenom": "Karim",
+    "date_naissance": "1987-12-19",
+    "nationalite": "France",
+    "position": "Attaquant",
+    "club": "Al-Ittihad",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/karim-benzema/profil/spieler/131099",
+    "motcles": [
+      "buteur",
+      "technique"
+    ],
+    "image": "/image/joueur/benzema.png",
+    "age": 37
+  },
+  {
+    "nom": "Vardy",
+    "prenom": "Jamie",
+    "date_naissance": "1987-01-11",
+    "nationalite": "Angleterre",
+    "position": "Attaquant",
+    "club": "Leicester",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/jamie-vardy/profil/spieler/89860",
+    "motcles": [
+      "rapide",
+      "contre-attaque"
+    ],
+    "image": "/image/joueur/vardy.png",
+    "age": 38
+  },
+  {
+    "nom": "Lukaku",
+    "prenom": "Romelu",
+    "date_naissance": "1993-05-13",
+    "nationalite": "Belgique",
+    "position": "Attaquant",
+    "club": "AS Roma",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/romelu-lukaku/profil/spieler/96341",
+    "motcles": [
+      "puissant",
+      "buteur"
+    ],
+    "image": "/image/joueur/lukaku.png",
+    "age": 31
+  },
+  {
+    "nom": "Griezmann",
+    "prenom": "Antoine",
+    "date_naissance": "1991-03-21",
+    "nationalite": "France",
+    "position": "Ailier",
+    "club": "Atlético Madrid",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/antoine-griezmann/profil/spieler/90503",
+    "motcles": [
+      "technique",
+      "créatif"
+    ],
+    "image": "/image/joueur/griezmann.png",
+    "age": 34
+  },
+  {
+    "nom": "Sterling",
+    "prenom": "Raheem",
+    "date_naissance": "1994-12-08",
+    "nationalite": "Angleterre",
+    "position": "Ailier",
+    "club": "Chelsea",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/raheem-sterling/profil/spieler/147282",
+    "motcles": [
+      "rapide",
+      "dribbleur"
+    ],
+    "image": "/image/joueur/sterling.png",
+    "age": 30
+  },
+  {
+    "nom": "Kimmich",
+    "prenom": "Joshua",
+    "date_naissance": "1995-02-08",
+    "nationalite": "Allemagne",
+    "position": "Milieu",
+    "club": "Bayern Munich",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/joshua-kimmich/profil/spieler/205371",
+    "motcles": [
+      "passeur",
+      "polyvalent"
+    ],
+    "image": "/image/joueur/kimmich.png",
+    "age": 30
+  },
+  {
+    "nom": "Busquets",
+    "prenom": "Sergio",
+    "date_naissance": "1988-07-16",
+    "nationalite": "Espagne",
+    "position": "Milieu",
+    "club": "Inter Miami",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/sergio-busquets/profil/spieler/6531",
+    "motcles": [
+      "positionnement",
+      "lecture"
+    ],
+    "image": "/image/joueur/busquets.png",
+    "age": 36
+  },
+  {
+    "nom": "Piqué",
+    "prenom": "Gerard",
+    "date_naissance": "1987-02-02",
+    "nationalite": "Espagne",
+    "position": "Défenseur",
+    "club": "Retraité",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/gerard-pique/profil/spieler/2924",
+    "motcles": [
+      "taclé",
+      "anticipation"
+    ],
+    "image": "/image/joueur/pique.png",
+    "age": 38
+  },
+  {
+    "nom": "Ramos",
+    "prenom": "Sergio",
+    "date_naissance": "1986-03-30",
+    "nationalite": "Espagne",
+    "position": "Défenseur",
+    "club": "PSG",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/sergio-ramos/profil/spieler/2645",
+    "motcles": [
+      "leader",
+      "taclé"
+    ],
+    "image": "/image/joueur/ramos.png",
+    "age": 39
+  },
+  {
+    "nom": "Varane",
+    "prenom": "Raphaël",
+    "date_naissance": "1993-04-25",
+    "nationalite": "France",
+    "position": "Défenseur",
+    "club": "Manchester United",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/raphael-varane/profil/spieler/83913",
+    "motcles": [
+      "rapide",
+      "anticipation"
+    ],
+    "image": "/image/joueur/varane.png",
+    "age": 31
+  },
+  {
+    "nom": "Davies",
+    "prenom": "Alphonso",
+    "date_naissance": "2000-11-02",
+    "nationalite": "Canada",
+    "position": "Défenseur",
+    "club": "FC Bayern",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/alphonso-davies/profil/spieler/481191",
+    "motcles": [
+      "rapide",
+      "attaque"
+    ],
+    "image": "/image/joueur/davies.png",
+    "age": 24
+  },
+  {
+    "nom": "Sancho",
+    "prenom": "Jadon",
+    "date_naissance": "2000-03-25",
+    "nationalite": "Angleterre",
+    "position": "Ailier",
+    "club": "Arsenal",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/jadon-sancho/profil/spieler/423279",
+    "motcles": [
+      "dribbleur",
+      "créatif"
+    ],
+    "image": "/image/joueur/sancho.png",
+    "age": 25
+  },
+  {
+    "nom": "Mount",
+    "prenom": "Mason",
+    "date_naissance": "1999-01-10",
+    "nationalite": "Angleterre",
+    "position": "Milieu",
+    "club": "Chelsea",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/mason-mount/profil/spieler/344831",
+    "motcles": [
+      "passeur",
+      "technique"
+    ],
+    "image": "/image/joueur/mount.png",
+    "age": 26
+  },
+  {
+    "nom": "Rodri",
+    "prenom": "Diego",
+    "date_naissance": "1996-06-22",
+    "nationalite": "Espagne",
+    "position": "Milieu",
+    "club": "Manchester City",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/diego-rodri/profil/spieler/303737",
+    "motcles": [
+      "passeur",
+      "physique"
+    ],
+    "image": "/image/joueur/rodri.png",
+    "age": 28
+  },
+  {
+    "nom": "Cancelo",
+    "prenom": "João",
+    "date_naissance": "1994-05-27",
+    "nationalite": "Portugal",
+    "position": "Défenseur",
+    "club": "Manchester City",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/joao-cancelo/profil/spieler/248122",
+    "motcles": [
+      "dribbleur",
+      "polyvalent"
+    ],
+    "image": "/image/joueur/cancelo.png",
+    "age": 30
+  },
+  {
+    "nom": "Pulisic",
+    "prenom": "Christian",
+    "date_naissance": "1998-09-18",
+    "nationalite": "États-Unis",
+    "position": "Ailier",
+    "club": "AC Milan",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/christian-pulisic/profil/spieler/264505",
+    "motcles": [
+      "rapide",
+      "technique"
+    ],
+    "image": "/image/joueur/pulisic.png",
+    "age": 26
+  },
+  {
+    "nom": "De Gea",
+    "prenom": "David",
+    "date_naissance": "1990-11-07",
+    "nationalite": "Espagne",
+    "position": "Gardien",
+    "club": "Free Agent",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/david-de-gea/profil/spieler/4899",
+    "motcles": [
+      "reflexe",
+      "gardien"
+    ],
+    "image": "/image/joueur/degea.png",
+    "age": 34
+  },
+  {
+    "nom": "Neuer",
+    "prenom": "Manuel",
+    "date_naissance": "1986-03-27",
+    "nationalite": "Allemagne",
+    "position": "Gardien",
+    "club": "FC Bayern",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/manuel-neuer/profil/spieler/11354",
+    "motcles": [
+      "lecteur",
+      "reflexe"
+    ],
+    "image": "/image/joueur/neuer.png",
+    "age": 39
+  },
+  {
+    "nom": "Oblak",
+    "prenom": "Jan",
+    "date_naissance": "1993-01-07",
+    "nationalite": "Slovénie",
+    "position": "Gardien",
+    "club": "Atlético Madrid",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/jan-oblak/profil/spieler/178714",
+    "motcles": [
+      "reflexe",
+      "positionnement"
+    ],
+    "image": "/image/joueur/oblak.png",
+    "age": 32
+  },
+  {
+    "nom": "Courtois",
+    "prenom": "Thibaut",
+    "date_naissance": "1992-05-11",
+    "nationalite": "Belgique",
+    "position": "Gardien",
+    "club": "Real Madrid",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/thibaut-courtois/profil/spieler/86741",
+    "motcles": [
+      "taille",
+      "reflexe"
+    ],
+    "image": "/image/joueur/courtois.png",
+    "age": 33
+  },
+  {
+    "nom": "Kanté",
+    "prenom": "N'Golo",
+    "date_naissance": "1991-03-29",
+    "nationalite": "France",
+    "position": "Milieu",
+    "club": "Al Ittihad",
+    "lien_transfermarkt": "https://www.transfermarkt.fr/ngolo-kante/profil/spieler/150309",
+    "motcles": [
+      "tenace",
+      "physique"
+    ],
+    "image": "/image/joueur/kante.png",
+    "age": 34
+  }
+]
