@@ -1,5 +1,6 @@
 package appli.controleurs;
 
+import appli.modele.CollectionJoueur;
 import appli.modele.Joueur;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
@@ -12,5 +13,8 @@ public class VueGlobaleController {
     private ListView<Joueur> vueJoueur;
     @FXML
     private HBox vueRecherche;
-    public VueGlobaleController() {}
+    private CollectionJoueur collection;
+    public VueGlobaleController(CollectionJoueur collection) {
+        this.collection = collection;
+    }
 }

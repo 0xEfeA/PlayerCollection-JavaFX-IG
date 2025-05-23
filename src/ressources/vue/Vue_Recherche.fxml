@@ -14,7 +14,7 @@
             <String fx:value="rechercheImage" />
          </styleClass>
          <image>
-            <Image url="@../images/recherche.png" />
+            <Image url="@../image/recherche.png" />
          </image>
       </ImageView>
       <TextField id="rechercheText" fx:id="texteRecherche" prefHeight="41.0" prefWidth="321.0" styleClass="rechercheText" stylesheets="@../style.css" text="Rechercher..." />
