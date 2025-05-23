@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox id="VueRecherche" fx:id="vueRecherche" alignment="CENTER" prefHeight="43.0" prefWidth="400.0" styleClass="vueRecherche" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueRechercheController">
+   <children>
+      <ImageView id="rechercheImage" fx:id="iconeRecherche" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+         <styleClass>
+            <String fx:value="rechercheImage" />
+            <String fx:value="rechercheImage" />
+         </styleClass>
+         <image>
+            <Image url="@../images/recherche.png" />
+         </image>
+      </ImageView>
+      <TextField id="rechercheText" fx:id="texteRecherche" prefHeight="41.0" prefWidth="321.0" styleClass="rechercheText" stylesheets="@../style.css" text="Rechercher..." />
+   </children>
+</HBox>
