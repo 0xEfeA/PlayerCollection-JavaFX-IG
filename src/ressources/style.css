@@ -43,3 +43,18 @@
     -fx-font-style: italic;
     -fx-padding: 0;
 }
+
+.joueurInfo {
+    -fx-background-color: #6a6a6a;
+    -fx-padding: 8 12;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 8;
+    -fx-background-radius: 10px;
+}
+
+
+
+.joueurInfo .joueurNom {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+}

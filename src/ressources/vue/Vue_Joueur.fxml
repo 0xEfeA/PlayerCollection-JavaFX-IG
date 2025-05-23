@@ -3,4 +3,4 @@
 <?import javafx.scene.control.ListView?>
 
 
-<ListView id="Vueitem" fx:id="vueJoueur" prefHeight="473.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueJoueurController" />
+<ListView id="vueItem" fx:id="vueJoueur" prefHeight="473.0" prefWidth="400.0" styleClass="vueItem" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueJoueurController" />
