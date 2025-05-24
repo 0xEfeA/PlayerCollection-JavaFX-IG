@@ -24,5 +24,6 @@ public class CompoCellController {
         photoJoueur.setImage(new javafx.scene.image.Image(photo));
         //Chare nom prénom dans le label de la cellule
         nomJoueur.setText(j.getNom()+" "+j.getPrenom());
+
     }
 }

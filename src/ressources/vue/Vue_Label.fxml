@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane fx:id="vueLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label id="Nomjoueur" prefHeight="49.0" prefWidth="600.0" />
-   </children>
-</AnchorPane>
+<Label fx:id="nomJoueur" prefHeight="80.0" prefWidth="400.0" text="Label" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueLabelController" />

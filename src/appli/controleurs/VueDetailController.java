@@ -1,0 +1,26 @@
+package appli.controleurs;
+
+import appli.modele.CollectionJoueur;
+import javafx.fxml.FXML;
+
+public class VueDetailController {
+
+    private VueDetailJoueurController vueDetailJoueurController;
+    private VueLabelController vueLabelController;
+    private VueBoutonsController vueBoutonsController;
+
+    private CollectionJoueur collection;
+    public VueDetailController(CollectionJoueur collection, VueDetailJoueurController vueDetailJoueurController, VueLabelController vueLabelController, VueBoutonsController vueBoutonsController){
+        this.collection = collection;
+        this.vueDetailJoueurController = vueDetailJoueurController;
+        this.vueLabelController = vueLabelController;
+        this.vueBoutonsController = vueBoutonsController;
+    }
+
+    @FXML
+    public void initialize(){
+        String nom = collection.getJoueurList().getFirst().getNom()+" " +collection.getJoueurList().getFirst().getPrenom();
+        vueLabelController.setNom(nom);
+        vueDetailJoueurController.setJoueur(collection.getJoueurList().get(0));
+    }
+}
