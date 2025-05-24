@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 
-<HBox fx:id="Vuebouton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueBoutonsController">
+<HBox id="vueBoutons" fx:id="Vuebouton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="400.0" styleClass="vueBoutons" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueBoutonsController">
    <children>
-      <Button id="boutonPrecedent" fx:id="boutonPrecedent" mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" styleClass="bouton" stylesheets="@../style.css" text="&lt; Précédent" />
-      <Region prefHeight="85.0" prefWidth="75.0" HBox.hgrow="ALWAYS" />
-      <Button fx:id="boutonAccueil" mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" styleClass="bouton" stylesheets="@../style.css">
+      <Button id="boutonPrecedent" fx:id="boutonPrecedent" mnemonicParsing="false" styleClass="bouton" stylesheets="@../style.css" text="&lt; Précédent" />
+      <Region prefHeight="100.0" prefWidth="90.0" HBox.hgrow="ALWAYS" />
+      <Button fx:id="boutonAccueil" mnemonicParsing="false" styleClass="bouton" stylesheets="@../style.css">
          <graphic>
             <ImageView fitHeight="22.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -19,7 +19,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Region prefHeight="77.0" prefWidth="72.0" />
-      <Button id="boutonSuivant" fx:id="boutonSuivant" mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" styleClass="bouton" stylesheets="@../style.css" text="Suivant &gt;" />
+      <Region prefHeight="100.0" prefWidth="90.0" HBox.hgrow="ALWAYS" />
+      <Button id="boutonSuivant" fx:id="boutonSuivant" mnemonicParsing="false" styleClass="bouton" stylesheets="@../style.css" text="Suivant &gt;" />
    </children>
 </HBox>

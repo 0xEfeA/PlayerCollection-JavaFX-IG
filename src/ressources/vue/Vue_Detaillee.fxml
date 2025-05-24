@@ -2,10 +2,10 @@
 
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-alignment: center;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueDetailController">
+<VBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueDetailController">
    <children>
       <fx:include source="Vue_Label.fxml" />
-      <fx:include prefHeight="500.0" source="Vue_DetailJoueur.fxml" VBox.vgrow="NEVER" />
-      <fx:include prefHeight="50.0" source="Vue_Boutons.fxml" />
+      <fx:include source="Vue_DetailJoueur.fxml" VBox.vgrow="ALWAYS" />
+      <fx:include source="Vue_Boutons.fxml" />
    </children>
 </VBox>

@@ -5,15 +5,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueDetailJoueurController">
+<VBox id="pageJoueur" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" styleClass="pageJoueur" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueDetailJoueurController">
    <children>
-      <ImageView fx:id="photo" fitHeight="192.0" fitWidth="399.0" pickOnBounds="true" preserveRatio="true" />
-      <Hyperlink fx:id="lien" prefHeight="24.0" prefWidth="400.0" style="-fx-alignment: center;" text="Hyperlink" />
-      <Label fx:id="age" prefHeight="80.0" prefWidth="400.0" />
-      <Label fx:id="poste" prefHeight="80.0" prefWidth="400.0" />
-      <Label fx:id="origine" prefHeight="80.0" prefWidth="400.0" />
-      <Label fx:id="club" prefHeight="80.0" prefWidth="400.0" />
-      <Label fx:id="MotCles" prefHeight="80.0" prefWidth="400.0" />
+      <ImageView id="imagejoueur" fx:id="photo" fitHeight="192.0" fitWidth="399.0" pickOnBounds="true" preserveRatio="true" styleClass="imagejoueur" />
+      <Hyperlink id="lien" fx:id="lien" prefHeight="24.0" prefWidth="400.0" style="-fx-alignment: center;" styleClass="lien" stylesheets="@../style.css" text="Hyperlink" />
+      <Label id="labeljoueurinfo" fx:id="age" prefHeight="80.0" prefWidth="400.0" styleClass="labelinfojoueur" />
+      <Label id="labeljoueurinfo" fx:id="poste" alignment="CENTER" prefHeight="80.0" prefWidth="400.0" styleClass="labelinfojoueur" />
+      <Label id="labeljoueurinfo" fx:id="origine" prefHeight="80.0" prefWidth="400.0" styleClass="labelinfojoueur" />
+      <Label id="labeljoueurinfo" fx:id="club" prefHeight="80.0" prefWidth="400.0" styleClass="labelinfojoueur" stylesheets="@../style.css" />
+      <Label id="labeljoueurinfo" fx:id="MotCles" prefHeight="80.0" prefWidth="400.0" styleClass="labelinfojoueur" stylesheets="@../style.css" />
    </children>
 </VBox>

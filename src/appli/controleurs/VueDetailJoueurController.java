@@ -40,11 +40,21 @@ public class VueDetailJoueurController {
         assert photoressource != null;
         photo.setImage(new javafx.scene.image.Image(photoressource));
         lien.setText(j.getLien_transfermakt());
-        age.setText(Integer.toString(j.getAge()));
-        poste.setText(j.getPosition());
-        origine.setText(j.getNationalite());
-        club.setText(j.getClub());
+        StringBuilder sbage = new StringBuilder();
+        sbage.append("Age : ").append(j.getAge());
+        age.setText(sbage.toString());
+        StringBuilder sbposte = new StringBuilder();
+        sbposte.append("Poste : ").append(j.getPosition());
+        poste.setText(sbposte.toString());
+        StringBuilder sborigine = new StringBuilder();
+        sborigine.append("Origine : ").append(j.getNationalite());
+        origine.setText(sborigine.toString());
+        StringBuilder sbclub = new StringBuilder();
+        sbclub.append("Club : ").append(j.getClub());
+        club.setText(sbclub.toString());
+
         StringBuilder motcles = new StringBuilder();
+        motcles.append("Mot clés : ");
         for(String motcle : j.getMotcles()){
             motcles.append(motcle).append(" ");
         }

@@ -3,4 +3,4 @@
 <?import javafx.scene.control.Label?>
 
 
-<Label fx:id="nomJoueur" prefHeight="80.0" prefWidth="400.0" text="Label" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueLabelController" />
+<Label id="nomJoueur" fx:id="nomJoueur" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="400.0" styleClass="nomJoueur" stylesheets="@../style.css" text="Label" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueLabelController" />
