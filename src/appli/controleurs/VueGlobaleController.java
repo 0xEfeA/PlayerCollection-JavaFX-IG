@@ -14,7 +14,11 @@ public class VueGlobaleController {
     @FXML
     private HBox vueRecherche;
     private CollectionJoueur collection;
+    ModificateurVue mv;
     public VueGlobaleController(CollectionJoueur collection) {
         this.collection = collection;
+    }
+    public void setMv(ModificateurVue mv){
+        this.mv = mv;
     }
 }

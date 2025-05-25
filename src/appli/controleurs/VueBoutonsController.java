@@ -1,9 +1,12 @@
 package appli.controleurs;
 
 import appli.modele.CollectionJoueur;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+
+import java.io.IOException;
 
 public class VueBoutonsController {
 
@@ -17,8 +20,15 @@ public class VueBoutonsController {
     private ImageView VueBouton;
 
     private CollectionJoueur collection;
+    private ModificateurVue mv;
     public VueBoutonsController(CollectionJoueur collection){
         this.collection = collection;
     }
 
+    public void setMv(ModificateurVue mv){
+        this.mv = mv;
+    }
+    public void onAccueil(ActionEvent actionEvent) {
+        mv.AfficherVueGlobale();
+    }
 }

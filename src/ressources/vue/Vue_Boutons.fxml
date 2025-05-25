@@ -10,7 +10,7 @@
    <children>
       <Button id="boutonPrecedent" fx:id="boutonPrecedent" mnemonicParsing="false" styleClass="bouton" stylesheets="@../style.css" text="&lt; Précédent" />
       <Region prefHeight="100.0" prefWidth="90.0" HBox.hgrow="ALWAYS" />
-      <Button fx:id="boutonAccueil" mnemonicParsing="false" styleClass="bouton" stylesheets="@../style.css">
+      <Button fx:id="boutonAccueil" mnemonicParsing="false" onAction="#onAccueil" styleClass="bouton" stylesheets="@../style.css">
          <graphic>
             <ImageView fitHeight="22.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                <image>
