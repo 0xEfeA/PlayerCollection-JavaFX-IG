@@ -8,7 +8,7 @@
 
 <HBox id="vueBoutons" fx:id="Vuebouton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="400.0" styleClass="vueBoutons" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.VueBoutonsController">
    <children>
-      <Button id="boutonPrecedent" fx:id="boutonPrecedent" mnemonicParsing="false" styleClass="bouton" stylesheets="@../style.css" text="&lt; Précédent" />
+      <Button id="boutonPrecedent" fx:id="boutonPrecedent" mnemonicParsing="false" onAction="#onPrecedent" styleClass="bouton" stylesheets="@../style.css" text="&lt; Précédent" />
       <Region prefHeight="100.0" prefWidth="90.0" HBox.hgrow="ALWAYS" />
       <Button fx:id="boutonAccueil" mnemonicParsing="false" onAction="#onAccueil" styleClass="bouton" stylesheets="@../style.css">
          <graphic>
@@ -20,6 +20,6 @@
          </graphic>
       </Button>
       <Region prefHeight="100.0" prefWidth="90.0" HBox.hgrow="ALWAYS" />
-      <Button id="boutonSuivant" fx:id="boutonSuivant" mnemonicParsing="false" styleClass="bouton" stylesheets="@../style.css" text="Suivant &gt;" />
+      <Button id="boutonSuivant" fx:id="boutonSuivant" mnemonicParsing="false" onAction="#onSuivant" styleClass="bouton" stylesheets="@../style.css" text="Suivant &gt;" />
    </children>
 </HBox>

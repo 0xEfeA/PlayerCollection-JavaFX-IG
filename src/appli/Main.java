@@ -75,6 +75,7 @@ public  class Main extends Application {
         this.sceneDetail = new Scene(rootDetail,600,800);
         ModificateurVue mv = new ModificateurVue(sceneGlobale,sceneDetail,this);
         vueJoueurController.setVueDetailController(vueDetailController);
+        vueBoutonsController.setVueDetailController(vueDetailController);
         // Ajout du Modificateur de Vue aux Controlleur qui change les vues sur des actions
         vueJoueurController.setMv(mv);
         vueDetailController.setMv(mv);
@@ -83,7 +84,7 @@ public  class Main extends Application {
         this.stage = primaryStage;
         this.stage.setTitle("Collection Joueur de Football");
 
-        this.stage.setScene(this.sceneDetail);
+        this.stage.setScene(this.sceneGlobale);
         this.stage.show();
     }
 

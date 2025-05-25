@@ -20,6 +20,7 @@ public class VueBoutonsController {
 
     private CollectionJoueur collection;
     private ModificateurVue mv;
+    private VueDetailController vueDetailController;
     public VueBoutonsController(CollectionJoueur collection){
         this.collection = collection;
     }
@@ -27,12 +28,21 @@ public class VueBoutonsController {
     public void setMv(ModificateurVue mv){
         this.mv = mv;
     }
-
+    public void setVueDetailController(VueDetailController vueDetailController){
+        this.vueDetailController = vueDetailController;
+    }
     /**
      * Affiche la vue globale
      * @param actionEvent
      */
     public void onAccueil(ActionEvent actionEvent) {
         mv.AfficherVueGlobale();
+    }
+
+    public void onSuivant(ActionEvent actionEvent) {
+        vueDetailController.suivant();
+    }
+    public void onPrecedent(ActionEvent actionEvent) {
+        vueDetailController.precedent();
     }
 }
