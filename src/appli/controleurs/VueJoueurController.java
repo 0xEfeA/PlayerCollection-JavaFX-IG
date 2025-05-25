@@ -10,19 +10,34 @@ public class VueJoueurController {
     @FXML
     private ListView<Joueur> vueJoueur;
     private CollectionJoueur collection;
+
+    private ModificateurVue mv;
+    private VueDetailController vueDetailController;
     public VueJoueurController(CollectionJoueur collection) {
         this.collection = collection;
     }
 
+    public void setMv(ModificateurVue mv) {
+        this.mv = mv;
+    }
+    public void setVueDetailController(VueDetailController vueDetailController) {
+        this.vueDetailController = vueDetailController;
+    }
     @FXML
     /**
-     * Initialise la listview
+     * Initialise la listview et ajoute écouteur
      */
     public void initialize(){
         this.collection.getJoueurList().forEach(j -> vueJoueur.getItems().add(j));
         vueJoueur.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         vueJoueur.setCellFactory(lv -> new CompoCell());
-
-
+        // SUr la séléction d'une cellule
+        vueJoueur.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                //Met a jour la vue détaillée est l'affiche
+                vueDetailController.afficherJoueur(newValue);
+                mv.AfficherVueDetaillee();
+            }
+        });
     }
 }

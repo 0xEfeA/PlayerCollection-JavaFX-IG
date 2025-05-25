@@ -1,6 +1,7 @@
 package appli.controleurs;
 
 import appli.modele.CollectionJoueur;
+import appli.modele.Joueur;
 import javafx.fxml.FXML;
 
 public class VueDetailController {
@@ -18,7 +19,10 @@ public class VueDetailController {
         this.vueLabelController = vueLabelController;
         this.vueBoutonsController = vueBoutonsController;
     }
-
+    public void afficherJoueur(Joueur joueur){
+        vueLabelController.setNom(joueur.getNom()+ " " + joueur.getPrenom());
+        vueDetailJoueurController.setJoueur(joueur);
+    }
     /**
      * Set modificateur vue
      * @param mv

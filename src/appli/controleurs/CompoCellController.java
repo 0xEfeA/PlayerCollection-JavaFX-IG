@@ -17,7 +17,7 @@ public class CompoCellController {
     @FXML
     private HBox Compocell;
 
-    /**
+ /**
      * Affiche les informations du joueur j dans la cellule
      * @param j joueur
      */
@@ -35,6 +35,4 @@ public class CompoCellController {
 
     }
 
-    public void onClick(MouseEvent mouseEvent) {
-    }
 }

@@ -74,7 +74,9 @@ public  class Main extends Application {
         this.sceneGlobale = new Scene(rootGlobale,600, 800);
         this.sceneDetail = new Scene(rootDetail,600,800);
         ModificateurVue mv = new ModificateurVue(sceneGlobale,sceneDetail,this);
+        vueJoueurController.setVueDetailController(vueDetailController);
         // Ajout du Modificateur de Vue aux Controlleur qui change les vues sur des actions
+        vueJoueurController.setMv(mv);
         vueDetailController.setMv(mv);
         vueGlobaleController.setMv(mv);
         vueBoutonsController.setMv(mv);
