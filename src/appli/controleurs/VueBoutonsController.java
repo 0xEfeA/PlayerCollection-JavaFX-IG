@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 
-import java.io.IOException;
 
 public class VueBoutonsController {
 
@@ -28,6 +27,11 @@ public class VueBoutonsController {
     public void setMv(ModificateurVue mv){
         this.mv = mv;
     }
+
+    /**
+     * Affiche la vue globale
+     * @param actionEvent
+     */
     public void onAccueil(ActionEvent actionEvent) {
         mv.AfficherVueGlobale();
     }

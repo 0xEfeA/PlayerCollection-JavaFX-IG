@@ -10,12 +10,19 @@ public class VueDetailController {
     private VueBoutonsController vueBoutonsController;
     private ModificateurVue mv;
     private CollectionJoueur collection;
+
+
     public VueDetailController(CollectionJoueur collection, VueDetailJoueurController vueDetailJoueurController, VueLabelController vueLabelController, VueBoutonsController vueBoutonsController){
         this.collection = collection;
         this.vueDetailJoueurController = vueDetailJoueurController;
         this.vueLabelController = vueLabelController;
         this.vueBoutonsController = vueBoutonsController;
     }
+
+    /**
+     * Set modificateur vue
+     * @param mv
+     */
     public void setMv(ModificateurVue mv){
         this.mv = mv;
     }

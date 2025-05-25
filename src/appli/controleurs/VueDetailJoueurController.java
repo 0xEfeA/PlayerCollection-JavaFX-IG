@@ -31,27 +31,26 @@ public class VueDetailJoueurController {
         this.collection = collection;
     }
 
+    /**
+     * Affiche les attributs du joueur J
+     * @param j
+     */
     public void setJoueur(Joueur j){
         String chemin = j.getImage();
         InputStream photoressource = getClass().getResourceAsStream(chemin);
+        //Image par défaut si pas d'image
         if ( photoressource == null ) {
             photoressource = getClass().getResourceAsStream("/image/default.png");
         }
         assert photoressource != null;
+
+        // Affichage attributs
         photo.setImage(new javafx.scene.image.Image(photoressource));
         lien.setText(j.getLien_transfermakt());
-        StringBuilder sbage = new StringBuilder();
-        sbage.append("Age : ").append(j.getAge());
-        age.setText(sbage.toString());
-        StringBuilder sbposte = new StringBuilder();
-        sbposte.append("Poste : ").append(j.getPosition());
-        poste.setText(sbposte.toString());
-        StringBuilder sborigine = new StringBuilder();
-        sborigine.append("Origine : ").append(j.getNationalite());
-        origine.setText(sborigine.toString());
-        StringBuilder sbclub = new StringBuilder();
-        sbclub.append("Club : ").append(j.getClub());
-        club.setText(sbclub.toString());
+        age.setText("Age : " + j.getAge());
+        poste.setText("Poste : " + j.getPosition());
+        origine.setText("Origine : " + j.getNationalite());
+        club.setText("Club : " + j.getClub());
 
         StringBuilder motcles = new StringBuilder();
         motcles.append("Mot clés : ");

@@ -13,7 +13,11 @@ public class VueJoueurController {
     public VueJoueurController(CollectionJoueur collection) {
         this.collection = collection;
     }
+
     @FXML
+    /**
+     * Initialise la listview
+     */
     public void initialize(){
         this.collection.getJoueurList().forEach(j -> vueJoueur.getItems().add(j));
         vueJoueur.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);

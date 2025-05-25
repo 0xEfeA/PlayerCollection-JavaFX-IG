@@ -12,6 +12,11 @@ public class VueLabelController {
     public VueLabelController(CollectionJoueur collection){
         this.collection = collection;
     }
+
+    /**
+     * Changer le nom du joueur
+     * @param nom
+     */
     public void setNom(String nom){
         nomJoueur.setText(nom);
     }
