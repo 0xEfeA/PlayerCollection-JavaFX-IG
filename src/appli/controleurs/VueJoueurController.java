@@ -39,5 +39,6 @@ public class VueJoueurController {
                 mv.AfficherVueDetaillee();
             }
         });
+
     }
 }

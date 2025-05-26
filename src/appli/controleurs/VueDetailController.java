@@ -25,6 +25,7 @@ public class VueDetailController {
         joueurActuel = joueur;
         vueLabelController.setNom(joueur.getNom()+ " " + joueur.getPrenom());
         vueDetailJoueurController.setJoueur(joueur);
+
     }
     /**
      * Set modificateur vue
