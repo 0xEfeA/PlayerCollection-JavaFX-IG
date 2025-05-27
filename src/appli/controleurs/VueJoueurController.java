@@ -28,17 +28,32 @@ public class VueJoueurController {
      * Initialise la listview et ajoute écouteur
      */
     public void initialize(){
-        this.collection.getJoueurList().forEach(j -> vueJoueur.getItems().add(j));
+      actualiserListView();
+      EcouteurCellule();
+
+    }
+
+    /**
+     * Actualise la listview
+     */
+    public void actualiserListView(){
+        vueJoueur.getItems().clear();
+        vueJoueur.getItems().addAll(collection.getJoueurList());
+    }
+
+    /**
+     * Configue la méthode de sélection et ajoute un écouteur sur chaque cellule
+     */
+    public void EcouteurCellule(){
         vueJoueur.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         vueJoueur.setCellFactory(lv -> new CompoCell());
-        // SUr la séléction d'une cellule
-        vueJoueur.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue != null) {
-                //Met a jour la vue détaillée est l'affiche
-                vueDetailController.afficherJoueur(newValue);
-                mv.AfficherVueDetaillee();
-            }
-        });
-
+        vueJoueur.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> {
+                    if (newValue != null) {
+                        vueDetailController.afficherJoueur(newValue);
+                        mv.AfficherVueDetaillee();
+                    }
+                }
+        );
     }
 }

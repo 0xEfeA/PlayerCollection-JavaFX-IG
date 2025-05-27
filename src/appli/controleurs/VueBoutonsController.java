@@ -5,10 +5,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 
 
 public class VueBoutonsController {
-
+    @FXML
+    public HBox Vuebouton;
     @FXML
     private Button boutonPrecedent;
     @FXML
@@ -39,9 +41,18 @@ public class VueBoutonsController {
         mv.AfficherVueGlobale();
     }
 
+    /**
+     * Affiche le joueur suivant
+     * @param actionEvent
+     */
     public void onSuivant(ActionEvent actionEvent) {
         vueDetailController.suivant();
     }
+
+    /**
+     * Affiche le joueur précédent
+     * @param actionEvent
+     */
     public void onPrecedent(ActionEvent actionEvent) {
         vueDetailController.precedent();
     }

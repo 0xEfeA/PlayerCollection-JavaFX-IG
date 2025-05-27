@@ -77,6 +77,7 @@ public  class Main extends Application {
         //Utilisation de hostService pour ouvrir le lien car Desktop.browse() fait crasher l'appli
 
         vueDetailJoueurController.setHostServices(getHostServices());
+        vueEditionController.setVueJoueurController(vueJoueurController);
         vueJoueurController.setVueDetailController(vueDetailController);
         vueBoutonsController.setVueDetailController(vueDetailController);
         // Ajout du Modificateur de Vue aux Controlleur qui change les vues sur des actions
