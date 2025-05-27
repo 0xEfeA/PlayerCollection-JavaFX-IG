@@ -7,12 +7,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 
 
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
@@ -50,15 +52,10 @@ public class VueDetailJoueurController {
     public void setJoueur(Joueur j){
         this.joueur = j;
         String chemin = j.getImage();
-        InputStream photoressource = getClass().getResourceAsStream(chemin);
-        //Image par défaut si pas d'image
-        if ( photoressource == null ) {
-            photoressource = getClass().getResourceAsStream("/image/default.png");
-        }
-        assert photoressource != null;
+        Image image = chargerImage(chemin);
+        photo.setImage(image);
 
-        // Affichage attributs
-        photo.setImage(new javafx.scene.image.Image(photoressource));
+
         lien.setText("TransfertMarkt");
         age.setText("Age : " + j.getAge());
         poste.setText("Poste : " + j.getPosition());
@@ -73,6 +70,19 @@ public class VueDetailJoueurController {
         MotCles.setText(motcles.toString());
 
       
+    }
+    private javafx.scene.image.Image chargerImage(String image){
+        InputStream is = getClass().getResourceAsStream(image);
+        if(is != null){
+            return new javafx.scene.image.Image(is);
+        }
+
+        File file = new File(image);
+        if(file.exists()){
+            return new javafx.scene.image.Image(file.toURI().toString(),true);
+        }
+        InputStream defaut = getClass().getResourceAsStream("/image/default.png");
+        return new Image(defaut);
     }
 
     /**

@@ -38,8 +38,8 @@
       <Label text="Nationalité :" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS" />
       <Label text="Club : " GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS" />
       <Label text="Position :" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.vgrow="ALWAYS" />
-      <Label text="Mots Clés :" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.vgrow="ALWAYS" />
-      <Label text="Image" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.vgrow="ALWAYS" />
+      <Label text="Mots Clés (laisser un espace entre chaque) :" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.vgrow="ALWAYS" />
+      <Label text="Choisir Image --&gt;" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.vgrow="ALWAYS" />
       <TextField fx:id="champsNom" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
       <TextField fx:id="champsPrenom" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <TextField fx:id="champsAge" GridPane.columnIndex="2" GridPane.rowIndex="2" />
