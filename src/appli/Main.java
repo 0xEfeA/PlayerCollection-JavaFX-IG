@@ -75,14 +75,13 @@ public  class Main extends Application {
         this.sceneDetail = new Scene(rootDetail,600,800);
         ModificateurVue mv = new ModificateurVue(sceneGlobale,sceneDetail,this);
         //Utilisation de hostService pour ouvrir le lien car Desktop.browse() fait crasher l'appli
-
         vueDetailJoueurController.setHostServices(getHostServices());
+
         vueEditionController.setVueJoueurController(vueJoueurController);
         vueJoueurController.setVueDetailController(vueDetailController);
         vueBoutonsController.setVueDetailController(vueDetailController);
         // Ajout du Modificateur de Vue aux Controlleur qui change les vues sur des actions
         vueJoueurController.setMv(mv);
-        vueDetailController.setMv(mv);
         vueGlobaleController.setMv(mv);
         vueBoutonsController.setMv(mv);
 

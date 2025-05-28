@@ -11,7 +11,6 @@ public class VueDetailController {
     private VueDetailJoueurController vueDetailJoueurController;
     private VueLabelController vueLabelController;
     private VueBoutonsController vueBoutonsController;
-    private ModificateurVue mv;
     private CollectionJoueur collection;
     private Joueur joueurActuel;
 
@@ -27,13 +26,7 @@ public class VueDetailController {
         vueDetailJoueurController.setJoueur(joueur);
 
     }
-    /**
-     * Set modificateur vue
-     * @param mv
-     */
-    public void setMv(ModificateurVue mv){
-        this.mv = mv;
-    }
+
 
     /**
      * Affiche le joueur précédent

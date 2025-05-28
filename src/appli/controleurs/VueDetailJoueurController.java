@@ -71,20 +71,24 @@ public class VueDetailJoueurController {
 
       
     }
-    private javafx.scene.image.Image chargerImage(String image){
-        InputStream is = getClass().getResourceAsStream(image);
-        if(is != null){
-            return new javafx.scene.image.Image(is);
+    private Image chargerImage(String image){
+        //Essaye de charger l'image depuis les ressources
+        if(image != null && !image.isEmpty()){
+            InputStream is = getClass().getResourceAsStream(image);
+            if(is != null){
+                return new Image(is);
+            }
+            //Sinon charge depuis chemin absolu
+            File file = new File(image);
+            if(file.exists()){
+                return new Image(file.toURI().toString(),true);
+            }
         }
 
-        File file = new File(image);
-        if(file.exists()){
-            return new javafx.scene.image.Image(file.toURI().toString(),true);
-        }
+        //Sinon charge image par défaut
         InputStream defaut = getClass().getResourceAsStream("/image/default.png");
         return new Image(defaut);
     }
-
     /**
      * Ouvre le lien tranfermakt du joueur
      * @param actionEvent click sur le lien

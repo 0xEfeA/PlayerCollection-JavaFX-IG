@@ -74,6 +74,12 @@ public class AddJoueurController {
                 motClesSet.add(scanner.nextLine());
             }
             scanner.close();
+            /*Passage de cheminImage en null si pas d'image ajoutée pour éviter une erreur qui fait que le chemin est vide
+            *mais pas vraiment null.Ce qui pose probleme dans ma méthode setImage dans les cellules de la listview
+             */
+            if(cheminImage == null || cheminImage.isBlank() || !new File(cheminImage).exists()){
+                cheminImage = null;
+            }
             //Création du joueur
             joueur = new Joueur(champsNom.getText(),champsPrenom.getText(),champsDate.getText(),champsNationalite.getText(),champsPosition.getText(),champsClub.getText(),champsLien.getText(),motClesSet,cheminImage,Integer.parseInt(champsAge.getText()));
             stage.close();

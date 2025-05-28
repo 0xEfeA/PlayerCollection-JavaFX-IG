@@ -10,6 +10,7 @@ import javafx.scene.layout.HBox;
 
 import java.io.File;
 import java.io.InputStream;
+import java.util.Objects;
 
 public class CompoCellController {
     @FXML
@@ -33,16 +34,23 @@ public class CompoCellController {
 
     }
     private Image chargerImage(String image){
-        InputStream is = getClass().getResourceAsStream(image);
-        if(is != null){
-            return new Image(is);
-        }
 
+        //Essaye de charger l'image depuis les ressources
+        if(image != null && !image.isEmpty()){
+
+            InputStream is = getClass().getResourceAsStream(image);
+            if(is != null){
+                return new Image(is);
+            }
+            //Sinon charge depuis chemin absolu
             File file = new File(image);
             if(file.exists()){
                 return new Image(file.toURI().toString(),true);
             }
-            InputStream defaut = getClass().getResourceAsStream("/image/default.png");
-            return new Image(defaut);
+        }
+
+        //Sinon charge image par défaut
+        InputStream defaut = getClass().getResourceAsStream("/image/default.png");
+        return new Image(defaut);
     }
 }
