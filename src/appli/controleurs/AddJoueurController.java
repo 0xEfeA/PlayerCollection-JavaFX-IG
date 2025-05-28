@@ -3,6 +3,7 @@ package appli.controleurs;
 import appli.modele.Joueur;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
@@ -64,17 +65,20 @@ public class AddJoueurController {
      */
     @FXML
     public void onAccepter(ActionEvent actionEvent) {
-        //Parsing des mots clés entrés
-        String motCles = champsMotCles.getText();
-        Scanner scanner = new Scanner(motCles);
-        Set<String> motClesSet = new HashSet<>();
-        while (scanner.hasNextLine()) {
-            motClesSet.add(scanner.nextLine());
+        if(verifierEntree()){
+            //Parsing des mots clés entrés
+            String motCles = champsMotCles.getText();
+            Scanner scanner = new Scanner(motCles);
+            Set<String> motClesSet = new HashSet<>();
+            while (scanner.hasNextLine()) {
+                motClesSet.add(scanner.nextLine());
+            }
+            scanner.close();
+            //Création du joueur
+            joueur = new Joueur(champsNom.getText(),champsPrenom.getText(),champsDate.getText(),champsNationalite.getText(),champsPosition.getText(),champsClub.getText(),champsLien.getText(),motClesSet,cheminImage,Integer.parseInt(champsAge.getText()));
+            stage.close();
         }
-        scanner.close();
-        //Création du joueur
-        joueur = new Joueur(champsNom.getText(),champsPrenom.getText(),champsDate.getText(),champsNationalite.getText(),champsPosition.getText(),champsClub.getText(),champsLien.getText(),motClesSet,cheminImage,Integer.parseInt(champsAge.getText()));
-        stage.close();
+
     }
 
     /**
@@ -92,5 +96,44 @@ public class AddJoueurController {
      */
     public Joueur getJoueur() {
         return joueur;
+    }
+
+    /**
+     * Valide la saisie des champs
+     * @return true si les champs sont valides, false sinon + alert erreur
+     */
+    private boolean verifierEntree(){
+        String message = "";
+        if(champsNom.getText().isBlank()){
+            message += "Veuillez entrer un nom\n";
+        }if(champsPrenom.getText().isBlank()){
+            message += "Veuillez entrer un prénom\n";
+        }
+        if(champsDate.getText().isBlank()){
+            message += "Veuillez entrer une date de naissance\n";
+        }
+        if(champsNationalite.getText().isBlank()){
+            message += "Veuillez entrer une nationalité \n";
+        }
+        if(champsClub.getText().isBlank()){
+            message += "Veuillez entrer un club\n";
+        }
+        if(champsLien.getText().isBlank()){
+            message += "Veuillez entrer un lien\n";
+        }
+        if(champsAge.getText().isBlank()){
+            message += "Veuillez entrer une age\n";
+        }
+        try{
+            Integer.parseInt(champsAge.getText());
+
+        }catch (NumberFormatException e){
+            message += "Pour l'âge : Veuillez entrer un nombre\n";
+        }
+        if(!message.isBlank()){
+            new Alert(Alert.AlertType.ERROR,message).showAndWait();
+            return false;
+        }
+        return true;
     }
 }
