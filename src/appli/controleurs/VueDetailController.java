@@ -2,7 +2,6 @@ package appli.controleurs;
 
 import appli.modele.CollectionJoueur;
 import appli.modele.Joueur;
-import javafx.fxml.FXML;
 
 import java.util.List;
 
