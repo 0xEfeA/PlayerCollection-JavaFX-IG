@@ -74,4 +74,14 @@ public class CollectionJoueur {
       return sb.toString();
     }
 
+    public void ajouterMotcle(String motcle){
+        motcles.add(motcle);
+    }
+    public void supprimerMotcle(String motcle){
+        motcles.remove(motcle);
+    }
+    public boolean motcleExiste(String motcle){
+        return motcles.contains(motcle);
+    }
+
 }

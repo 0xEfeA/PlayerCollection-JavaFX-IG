@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -10,11 +12,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-vgap: 10; -fx-hgap: 10; -fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="appli.controleurs.AddJoueurController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="668.0" style="-fx-vgap: 10; -fx-hgap: 10; -fx-padding: 20; -fx-border-color: blue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.controleurs.AddJoueurController">
   <columnConstraints>
     <ColumnConstraints />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="356.0" minWidth="10.0" prefWidth="183.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="485.0" minWidth="10.0" prefWidth="423.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -38,7 +40,7 @@
       <Label text="Nationalité :" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS" />
       <Label text="Club : " GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS" />
       <Label text="Position :" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.vgrow="ALWAYS" />
-      <Label text="Mots Clés (laisser un espace entre chaque) :" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.vgrow="ALWAYS" />
+      <Label text="Mots clés :" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8" GridPane.vgrow="ALWAYS" />
       <Label text="Choisir Image --&gt;" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.vgrow="ALWAYS" />
       <TextField fx:id="champsNom" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
       <TextField fx:id="champsPrenom" GridPane.columnIndex="2" GridPane.rowIndex="1" />
@@ -48,27 +50,40 @@
       <TextField fx:id="champsNationalite" GridPane.columnIndex="2" GridPane.rowIndex="5" />
       <TextField fx:id="champsClub" GridPane.columnIndex="2" GridPane.rowIndex="6" />
       <TextField fx:id="champsPosition" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-      <TextField fx:id="champsMotCles" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-      <Button fx:id="boutonImage" mnemonicParsing="false" onAction="#onImage" prefHeight="27.0" prefWidth="424.0" text="Ajouter Image" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.vgrow="ALWAYS" />
+      <Button fx:id="boutonImage" alignment="CENTER" mnemonicParsing="false" onAction="#onImage" prefHeight="27.0" prefWidth="623.0" text="Ajouter Image" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9" GridPane.vgrow="ALWAYS" />
       <HBox alignment="BASELINE_RIGHT" prefHeight="50.0" prefWidth="552.0" style="-fx-spacing: 15; -fx-padding: 10;" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10">
          <children>
-            <Button mnemonicParsing="false" onAction="#onCancel" HBox.hgrow="ALWAYS">
+            <Button mnemonicParsing="false" onAction="#onCancel" prefHeight="15.0" prefWidth="0.0" styleClass="bouton" stylesheets="@../style.css" HBox.hgrow="ALWAYS">
                <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../image/annuler.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#onAccepter" HBox.hgrow="ALWAYS">
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#onAccepter" styleClass="bouton" stylesheets="@../style.css" HBox.hgrow="ALWAYS">
                <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../image/accepter.png" />
                      </image>
                   </ImageView>
                </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onAjouterMotcle" prefWidth="100.0" styleClass="bouton" stylesheets="@../style.css" text="Ajouter" HBox.hgrow="ALWAYS">
+               <tooltip>
+                  <Tooltip text="Permet d'ajouter le mot clé saisie dans la combobox au model" />
+               </tooltip></Button>
+            <ComboBox fx:id="comboMotcle" editable="true" prefHeight="26.0" prefWidth="204.0" HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" onAction="#onSelection" prefWidth="100.0" styleClass="bouton" stylesheets="@../style.css" text="Selectionner" HBox.hgrow="ALWAYS">
+               <tooltip>
+                  <Tooltip text="Permet de d'ajouter le mot clé choisi au joueur (Une fois disparu il est bien ajouté)" />
+               </tooltip>
             </Button>
          </children>
       </HBox>

@@ -51,7 +51,7 @@ public class VueEditionController {
            stage.setScene(new Scene(root));
 
            AddJoueurController controller = fxmlLoader.getController();
-           controller.setStage(stage);
+           controller.setData(collection,stage);
            stage.showAndWait();
            //Création joueur avec les infos rentrés
            Joueur joueur = controller.getJoueur();
