@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -12,6 +14,14 @@
             <Image url="@../image/default.png" />
          </image>
       </ImageView>
-      <Label id="joueurNom" fx:id="nomJoueur" prefHeight="98.0" prefWidth="445.0" styleClass="joueurNom" stylesheets="@../style.css" />
+      <Label id="joueurNom" fx:id="nomJoueur" prefHeight="98.0" prefWidth="445.0" styleClass="joueurNom" stylesheets="@../style.css">
+         <contextMenu>
+            <ContextMenu fx:id="compoContext">
+              <items>
+                  <MenuItem fx:id="menuSupprimer" mnemonicParsing="false" onAction="#onSupprimer" text="Supprimer" />
+                  <MenuItem fx:id="menuModifier" mnemonicParsing="false" onAction="#onModifier" text="Modifier" />
+              </items>
+            </ContextMenu>
+         </contextMenu></Label>
    </children>
 </HBox>

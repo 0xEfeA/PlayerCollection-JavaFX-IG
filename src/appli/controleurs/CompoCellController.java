@@ -1,8 +1,11 @@
 package appli.controleurs;
 
 import appli.modele.Joueur;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
@@ -12,13 +15,23 @@ import java.io.InputStream;
 
 public class CompoCellController {
     @FXML
+    public ContextMenu compoContext;
+    @FXML
+    public MenuItem menuSupprimer;
+    @FXML
+    public MenuItem menuModifier;
+    @FXML
     private ImageView photoJoueur;
     @FXML
     private Label nomJoueur;
     @FXML
     private HBox Compocell;
 
- /**
+
+
+
+
+    /**
      * Affiche les informations du joueur j dans la cellule
      * @param j joueur
      */
@@ -50,5 +63,12 @@ public class CompoCellController {
         //Sinon charge image par défaut
         InputStream defaut = getClass().getResourceAsStream("/image/default.png");
         return new Image(defaut);
+    }
+
+
+    public void onSupprimer(ActionEvent actionEvent) {
+    }
+
+    public void onModifier(ActionEvent actionEvent) {
     }
 }

@@ -5,6 +5,7 @@ import appli.modele.Joueur;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
+import javafx.scene.input.MouseButton;
 
 public class VueJoueurController {
     @FXML
@@ -42,18 +43,18 @@ public class VueJoueurController {
     }
 
     /**
-     * Configue la méthode de sélection et ajoute un écouteur sur chaque cellule
+     * Configue la méthode de sélection
      */
     public void EcouteurCellule(){
-        vueJoueur.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         vueJoueur.setCellFactory(lv -> new CompoCell());
-        vueJoueur.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> {
-                    if (newValue != null) {
-                        vueDetailController.afficherJoueur(newValue);
-                        mv.AfficherVueDetaillee();
-                    }
+        vueJoueur.setOnMouseClicked(event -> {
+            if (event.getButton() == MouseButton.PRIMARY) {
+                Joueur selection = vueJoueur.getSelectionModel().getSelectedItem();
+                if (selection != null) {
+                    vueDetailController.afficherJoueur(selection);
+                    mv.AfficherVueDetaillee();
                 }
-        );
+            }
+        });
     }
 }
