@@ -20,7 +20,7 @@ import java.io.IOException;
 
 public class VueEditionController {
     @FXML private Button boutonAjouter;
-    @FXML private Button boutonEdition;
+    @FXML private Button boutonStats;
     @FXML
     private MenuButton menuFichier;
 
@@ -109,5 +109,22 @@ public class VueEditionController {
         }catch (Exception e){
             new Alert(Alert.AlertType.ERROR, "Erreur de sauvegarde", ButtonType.OK).show();
         }
+    }
+
+    /**
+     * Affiche la page de stat
+     * @param actionEvent
+     * @throws IOException
+     */
+    public void onStats(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vue/Vue_Stats.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = new Stage();
+        stage.setTitle("Stats");
+        stage.setScene(new Scene(root));
+        StatsController controller = fxmlLoader.getController();
+        controller.setData(collection);
+        stage.showAndWait();
+
     }
 }

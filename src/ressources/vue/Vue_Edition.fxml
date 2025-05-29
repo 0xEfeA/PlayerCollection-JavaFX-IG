@@ -13,7 +13,7 @@
    <children>
       <Button id="boutonAjouter" fx:id="boutonAjouter" mnemonicParsing="false" onAction="#onAjouter" prefHeight="43.0" prefWidth="75.0" styleClass="bouton" stylesheets="@../style.css" text="Ajouter" textAlignment="CENTER" />
       <Region prefHeight="42.0" prefWidth="65.0" HBox.hgrow="ALWAYS" />
-      <Button id="boutonEdition" fx:id="boutonEdition" mnemonicParsing="false" prefHeight="43.0" prefWidth="75.0" styleClass="bouton" stylesheets="@../style.css" text="Edition" />
+      <Button id="boutonEdition" fx:id="boutonStats" mnemonicParsing="false" onAction="#onStats" prefHeight="43.0" prefWidth="75.0" styleClass="bouton" stylesheets="@../style.css" text="Stats" />
       <Region prefHeight="42.0" prefWidth="65.0" HBox.hgrow="ALWAYS" />
       <MenuButton fx:id="menuFichier" mnemonicParsing="false" prefHeight="24.0" prefWidth="67.0" styleClass="bouton">
         <items>
