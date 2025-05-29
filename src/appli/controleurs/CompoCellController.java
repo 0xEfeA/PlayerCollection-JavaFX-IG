@@ -4,12 +4,14 @@ import appli.modele.CollectionJoueur;
 import appli.modele.Joueur;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ContextMenu;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.InputStream;
@@ -54,7 +56,7 @@ public class CompoCellController {
         Image photo = chargerImage(image);
         //Charge photo dans l'imageview de la cellule
         photoJoueur.setImage(photo);
-        //Chare nom prénom dans le label de la cellule
+        //Charge nom prénom dans le label de la cellule
         nomJoueur.setText(j.getNom()+" "+j.getPrenom());
 
     }
@@ -88,6 +90,47 @@ public class CompoCellController {
         vueJoueurController.actualiserListView();
     }
 
+    /**
+     * Ouvre une fenêtre pré remplie qui permet de modifier le joueur choisi
+     * @param actionEvent
+     */
     public void onModifier(ActionEvent actionEvent) {
+        try {
+            //Charge la popup
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vue/AjoutJoueurPopup.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Ajouter joueur");
+
+            stage.setScene(new Scene(root));
+
+            AddJoueurController controller = fxmlLoader.getController();
+            controller.setData(collectionJoueur,stage);
+            //Pré remplie le champs avec les données du joueur
+            controller.champsNom.setText(joueur.getNom());
+            controller.champsPrenom.setText(joueur.getPrenom());
+            controller.champsClub.setText(joueur.getClub());
+            controller.champsAge.setText(Integer.toString(joueur.getAge()));
+            controller.champsNationalite.setText(joueur.getNationalite());
+            controller.champsPosition.setText(joueur.getPosition());
+            controller.champsLien.setText(joueur.getLien_transfermakt());
+            controller.setcheminImage(joueur.getImage());
+            controller.champsDate.setText(joueur.getDate_naissance());
+            controller.setMotClesSet(joueur.getMotcles());
+            stage.showAndWait();
+            //Création joueur avec les infos rentrés
+            Joueur joueur = controller.getJoueur();
+            if (joueur != null && !collectionJoueur.joueurExiste(joueur)) {
+                //Ajoute le "nouveau joueur" qui est en réalité le joueur modifié
+                collectionJoueur.ajouterJoueur(joueur);
+                //Supprime le joueur original
+                onSupprimer(actionEvent);
+                vueJoueurController.actualiserListView();
+            }
+        }catch (Exception e){
+            new Alert(Alert.AlertType.ERROR, "Erreur chargement popup ajouter", ButtonType.OK).show();
+        }
     }
+
 }

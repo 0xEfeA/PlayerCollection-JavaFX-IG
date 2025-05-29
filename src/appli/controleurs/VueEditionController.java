@@ -60,7 +60,7 @@ public class VueEditionController {
                vueJoueurController.actualiserListView();
            }
        }catch (Exception e){
-           new Alert(Alert.AlertType.ERROR, "Erreur de suppression", ButtonType.OK).show();
+           new Alert(Alert.AlertType.ERROR, "Erreur chargement popup ajouter", ButtonType.OK).show();
        }
     }
-}
+  }

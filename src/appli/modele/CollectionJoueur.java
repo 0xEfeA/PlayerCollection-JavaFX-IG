@@ -41,6 +41,22 @@ public class CollectionJoueur {
     }
 
     /**
+     * Test la présence d'un joueur
+     * @param joueur
+     * @return
+     */
+    public boolean joueurExiste(Joueur joueur) {
+
+            for (Joueur j : joueurList){
+                if(j.getNom().equals(joueur.getNom()) && j.getPrenom().equals(joueur.getPrenom())){
+                    return true;
+                }
+
+    }
+        return false;
+    }
+
+    /**
      * Supprime le joueur et ses mot clés s'ils ne sont associés qu'à lui
      * @param joueur
      */

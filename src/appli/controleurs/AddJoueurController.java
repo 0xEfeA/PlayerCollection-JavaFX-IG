@@ -43,12 +43,34 @@ public class AddJoueurController {
     private ObservableList<String> motClesSet = FXCollections.observableArrayList();
     private Set<String> motCleschoisis = new HashSet<>();
     private  CollectionJoueur collection;
+
+    /**
+     * Permet de récupérer les données utiles pour le fonctionnement du controleur
+     * @param collection
+     * @param stage
+     */
     public void setData(CollectionJoueur collection,Stage stage){
         this.collection = collection;
         this.stage = stage;
         //Charge les motcles de la collection
         motClesSet.addAll(collection.getMotcles());
         comboMotcle.setItems(motClesSet);
+    }
+
+    /**
+     * Set l'image du joueur à ajouter
+     * @param cheminImage
+     */
+    public void setcheminImage(String cheminImage){
+        this.cheminImage = cheminImage;
+    }
+
+    /**
+     * Set les mots clés du joueur
+     * @param motcle
+     */
+    public void setMotClesSet(Set<String> motcle){
+        this.motCleschoisis.addAll(motcle);
     }
 
     /**
@@ -76,7 +98,7 @@ public class AddJoueurController {
             /*Passage de cheminImage en null si pas d'image ajoutée pour éviter une erreur qui fait que le chemin est vide
             *mais pas vraiment null.Ce qui pose probleme dans ma méthode setImage dans les cellules de la listview
              */
-            if(cheminImage == null || cheminImage.isBlank() || !new File(cheminImage).exists()){
+            if(cheminImage == null || cheminImage.isBlank() ){
                 cheminImage = null;
             }
             //Création du joueur
@@ -171,4 +193,7 @@ public class AddJoueurController {
             comboMotcle.getEditor().setText("");
         }
     }
+
+
+
 }
