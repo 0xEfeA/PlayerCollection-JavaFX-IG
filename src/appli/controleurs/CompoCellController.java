@@ -101,7 +101,7 @@ public class CompoCellController {
             Parent root = fxmlLoader.load();
 
             Stage stage = new Stage();
-            stage.setTitle("Ajouter joueur");
+            stage.setTitle("Modifier joueur");
 
             stage.setScene(new Scene(root));
 

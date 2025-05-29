@@ -28,11 +28,13 @@ public class LecteurJson {
     public static CollectionJoueur lire(String chemin) throws IOException {
 
         CollectionJoueur collection = new CollectionJoueur();
-     try (InputStream inputStream = LecteurJson.class.getClassLoader().getResourceAsStream(chemin)){  //récupération depuis les ressources
-
-
+      InputStream inputStream = LecteurJson.class.getClassLoader().getResourceAsStream(chemin); //récupération depuis les ressources
          if (inputStream == null) {
-             throw new IllegalArgumentException("Fichier JSON introuvable"+" : "+chemin);
+            File file = new File(chemin);
+            if(!file.exists()){
+                throw new FileNotFoundException("Fichier json introuvable au chemin:"+chemin);
+            }
+            inputStream = new FileInputStream(file);
          }
          String data = new String(inputStream.readAllBytes());
          // Parsing en tableau de joueur
@@ -57,9 +59,7 @@ public class LecteurJson {
          }
          return collection;
 
-     }catch (Exception e){
-         throw new IOException("Erreur lors de la lecture du fichier JSON",e);
-     }
+
 
 
     }

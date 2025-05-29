@@ -20,6 +20,7 @@ public class CollectionJoueur {
         return joueurList;
     }
 
+
     /**
      * Ajoute le joueur si il n'existe pas encore
      * @param joueur
