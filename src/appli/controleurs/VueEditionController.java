@@ -100,8 +100,10 @@ public class VueEditionController {
         fileChooser.setTitle("Sauvegarder Json");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Json files", "*.json"));
         File file = fileChooser.showSaveDialog(new Stage());
-
-        if (!file.getName().endsWith(".json")) {
+        if(file==null){ //Cas où on quitte sans enregistrer
+            return;
+        }
+        if ( !file.getName().endsWith(".json")) {
             file = new File(file.getAbsolutePath() + ".json");
         }
         try{
