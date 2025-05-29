@@ -13,10 +13,20 @@ public class VueRechercheController {
     private ImageView iconeRecherche;
     @FXML
     private TextField texteRecherche;
+    private VueJoueurController vueJoueurController;
 
-    CollectionJoueur collection;
+    private CollectionJoueur collection;
     public VueRechercheController(CollectionJoueur collection) {
         this.collection = collection;
+    }
+    public void setVueJoueurController(VueJoueurController vueJoueurController) {
+        this.vueJoueurController = vueJoueurController;
+    }
+    @FXML
+    private void initialize() {
+        texteRecherche.textProperty().addListener((observable, oldValue, newValue) -> {
+            vueJoueurController.filtreJoueur(newValue);
+        });
     }
 
 }

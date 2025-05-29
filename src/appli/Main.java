@@ -76,7 +76,7 @@ public  class Main extends Application {
         ModificateurVue mv = new ModificateurVue(sceneGlobale,sceneDetail,this);
         //Utilisation de hostService pour ouvrir le lien car Desktop.browse() fait crasher l'appli
         vueDetailJoueurController.setHostServices(getHostServices());
-
+        vueRechercheController.setVueJoueurController(vueJoueurController);
         vueEditionController.setVueJoueurController(vueJoueurController);
         vueJoueurController.setVueDetailController(vueDetailController);
         vueBoutonsController.setVueDetailController(vueDetailController);
