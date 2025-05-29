@@ -68,14 +68,18 @@ public class VueEditionController {
        }
     }
 
+    /**
+     * Ouvre le gestionnaire de fichier puis créer la collection de joueur depuis le Json
+     * @param actionEvent
+     * @throws IOException
+     */
     public void onChargerFichier(ActionEvent actionEvent) throws IOException {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Charger fichier Json");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Json files", "*.json"));
         File file = fileChooser.showOpenDialog(new Stage());
-        System.out.println(file.getAbsolutePath());
         if(file != null){
-            //Création d'une nouvelle depuis laquelle on va modifier les attributs de l'instance de la vraie collection
+            //Création d'une nouvelle collection depuis laquelle on va modifier les attributs de l'instance de la vraie collection
             CollectionJoueur copie = LecteurJson.lire(file.getAbsolutePath());
             collection.getJoueurList().clear();
             collection.getJoueurList().addAll(copie.getJoueurList());
@@ -86,6 +90,24 @@ public class VueEditionController {
 
     }
 
-    public void onSauvegarder(ActionEvent actionEvent) {
+    /**
+     * Enregistre la collection dans le fichier json choisi
+     * @param actionEvent
+     * @throws IOException
+     */
+    public void onSauvegarder(ActionEvent actionEvent) throws IOException {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Sauvegarder Json");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Json files", "*.json"));
+        File file = fileChooser.showSaveDialog(new Stage());
+
+        if (!file.getName().endsWith(".json")) {
+            file = new File(file.getAbsolutePath() + ".json");
+        }
+        try{
+            LecteurJson.ecrire(collection,file.getAbsolutePath());
+        }catch (Exception e){
+            new Alert(Alert.AlertType.ERROR, "Erreur de sauvegarde", ButtonType.OK).show();
+        }
     }
 }

@@ -3,11 +3,15 @@ package appli.outil;
 
 import appli.modele.CollectionJoueur;
 import appli.modele.Joueur;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import org.json.*;
 
 
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -60,8 +64,49 @@ public class LecteurJson {
          return collection;
 
 
+    }
 
+    /**
+     * Créer un tableau json depuis la collection puis écrit dans le fichier choisi
+     * @param collection
+     * @throws IOException
+     */
+    public static void ecrire(CollectionJoueur collection, String chemin) throws IOException {
+        JSONArray joueurs = new JSONArray();
+        List<Joueur> joueurSet = collection.getJoueurList();
+        //crée un objet pour chaque joueur et l'ajout au tableau
+        for(Joueur joueur : joueurSet){
+            JSONObject objet = getJsonObject(joueur);
+            joueurs.put(objet);
+        }
+        //écrit le tableau dans le fichier en paramètre
+      try(FileWriter fileWriter = new FileWriter(chemin)){
+          fileWriter.write(joueurs.toString());
+      }
+    }
 
+    /**
+     * Renvoie l'objet avec les informations du joueur
+     * @param joueur joueur
+     * @return objet Json représentant le joueur
+     */
+    private static JSONObject getJsonObject(Joueur joueur) {
+        JSONObject objet = new JSONObject();
+        objet.put("nom", joueur.getNom());
+        objet.put("prenom", joueur.getPrenom());
+        objet.put("date_naissance", joueur.getDate_naissance());
+        objet.put("nationalite", joueur.getNationalite());
+        objet.put("position", joueur.getPosition());
+        objet.put("club", joueur.getClub());
+        objet.put("lien_transfermarkt", joueur.getLien_transfermakt());
+        objet.put("image", joueur.getImage());
+        objet.put("age", joueur.getAge());
+        JSONArray motcles = new JSONArray();
+        for (String motcle : joueur.getMotcles()) {
+            motcles.put(motcle);
+        }
+        objet.put("motcles", motcles);
+        return objet;
     }
 
 }

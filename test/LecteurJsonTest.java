@@ -1,6 +1,9 @@
 import appli.modele.CollectionJoueur;
 import appli.outil.LecteurJson;
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -16,4 +19,6 @@ class LecteurJsonTest {
         assertEquals(31,collection.getNbJoueurs());
         System.out.println(collection.toString());
     }
+
+
 }
