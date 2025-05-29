@@ -46,7 +46,7 @@ public class VueJoueurController {
      * Configue la méthode de sélection
      */
     public void EcouteurCellule(){
-        vueJoueur.setCellFactory(lv -> new CompoCell());
+        vueJoueur.setCellFactory(lv -> new CompoCell(collection,this));
         vueJoueur.setOnMouseClicked(event -> {
             if (event.getButton() == MouseButton.PRIMARY) {
                 Joueur selection = vueJoueur.getSelectionModel().getSelectedItem();

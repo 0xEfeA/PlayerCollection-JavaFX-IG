@@ -1,5 +1,6 @@
 package appli.controleurs;
 
+import appli.modele.CollectionJoueur;
 import appli.modele.Joueur;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,8 +28,20 @@ public class CompoCellController {
     @FXML
     private HBox Compocell;
 
+    private Joueur joueur;
+    private CollectionJoueur collectionJoueur;
+    private VueJoueurController vueJoueurController;
+    public CompoCellController() {}
 
-
+    /**
+     * PErmet de charger les données nécessaires au fonctionnement du controller
+     * @param collectionJoueur collection de joueur
+     * @param vueJoueurController Controller qui gère la listview
+     */
+    public void setDonnees(CollectionJoueur collectionJoueur,VueJoueurController vueJoueurController) {
+        this.collectionJoueur = collectionJoueur;
+        this.vueJoueurController = vueJoueurController;
+    }
 
 
     /**
@@ -36,6 +49,7 @@ public class CompoCellController {
      * @param j joueur
      */
     public void setJoueur(Joueur j){
+        joueur = j;
         String image = j.getImage();
         Image photo = chargerImage(image);
         //Charge photo dans l'imageview de la cellule
@@ -65,8 +79,13 @@ public class CompoCellController {
         return new Image(defaut);
     }
 
-
+    /**
+     * Fonction de suppresion dans le context menu, supprime le joueur du modèl et actualise la vue
+     * @param actionEvent sur click menuItem supprimer
+     */
     public void onSupprimer(ActionEvent actionEvent) {
+        collectionJoueur.supprimerJoueur(joueur);
+        vueJoueurController.actualiserListView();
     }
 
     public void onModifier(ActionEvent actionEvent) {

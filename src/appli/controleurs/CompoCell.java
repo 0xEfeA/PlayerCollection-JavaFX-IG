@@ -1,5 +1,6 @@
 package appli.controleurs;
 
+import appli.modele.CollectionJoueur;
 import appli.modele.Joueur;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ListCell;
@@ -10,13 +11,14 @@ import java.io.IOException;
 public class CompoCell extends ListCell<Joueur> {
     private HBox listJoueurs;
     private CompoCellController controller;
-
-    public CompoCell(){
+    public CompoCell(CollectionJoueur collectionJoueur, VueJoueurController vueJoueurController) {
         try {
             //Chargement du fichier fxml représentant la cellule
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vue/compoCell.fxml"));
             listJoueurs = loader.load();
-            controller = loader.getController();
+             controller = loader.getController();
+             //Donne les données nécessaires au CommpoCellController
+            controller.setDonnees(collectionJoueur,vueJoueurController);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
