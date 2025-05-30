@@ -15,9 +15,8 @@ public class VueRechercheController {
     private TextField texteRecherche;
     private VueJoueurController vueJoueurController;
 
-    private CollectionJoueur collection;
-    public VueRechercheController(CollectionJoueur collection) {
-        this.collection = collection;
+    public VueRechercheController() {
+
     }
     public void setVueJoueurController(VueJoueurController vueJoueurController) {
         this.vueJoueurController = vueJoueurController;

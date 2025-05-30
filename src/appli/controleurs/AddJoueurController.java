@@ -38,7 +38,7 @@ public class AddJoueurController {
     public Button boutonImage;
 
     private String cheminImage;
-    private Joueur joueur;
+        private Joueur joueur;
     private Stage stage;
     private ObservableList<String> motClesSet = FXCollections.observableArrayList();
     private Set<String> motCleschoisis = new HashSet<>();

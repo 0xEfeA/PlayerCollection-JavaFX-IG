@@ -31,15 +31,15 @@ public  class Main extends Application {
         // Controleur qui gère la listview de joueur dans la vue globale
         VueJoueurController vueJoueurController = new VueJoueurController(collection);
         // Controleur qui gère la barre de recherche dans vue globale
-        VueRechercheController vueRechercheController = new VueRechercheController(collection);
+        VueRechercheController vueRechercheController = new VueRechercheController();
         // Controleur du label de nom du joueur dans la vue détaillée
-        VueLabelController vueLabelController = new VueLabelController(collection);
+        VueLabelController vueLabelController = new VueLabelController();
         // Controleur des 3 boutons en bas dans la vue détaillée
-        VueBoutonsController vueBoutonsController = new VueBoutonsController(collection);
+        VueBoutonsController vueBoutonsController = new VueBoutonsController();
         // Controleur des info, photo et lien du joueur au centre de la vue détaillée
         VueDetailJoueurController vueDetailJoueurController = new VueDetailJoueurController(collection);
         //Controleur de la vue détaillée
-        VueDetailController vueDetailController = new VueDetailController(collection,vueDetailJoueurController,vueLabelController,vueBoutonsController);
+        VueDetailController vueDetailController = new VueDetailController(collection,vueDetailJoueurController,vueLabelController);
         //Préchargement des Vue pour pouvoir les charger plus tard
         FXMLLoader loaderGlobal = new FXMLLoader(getClass().getResource("/vue/Vue_Globale.fxml"));
         FXMLLoader loaderDetail = new FXMLLoader(getClass().getResource("/vue/Vue_Detaillee.fxml"));

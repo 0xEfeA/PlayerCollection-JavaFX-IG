@@ -20,11 +20,9 @@ public class VueBoutonsController {
     @FXML
     private ImageView VueBouton;
 
-    private CollectionJoueur collection;
     private ModificateurVue mv;
     private VueDetailController vueDetailController;
-    public VueBoutonsController(CollectionJoueur collection){
-        this.collection = collection;
+    public VueBoutonsController(){
     }
 
     public void setMv(ModificateurVue mv){

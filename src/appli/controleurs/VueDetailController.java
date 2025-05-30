@@ -9,15 +9,13 @@ public class VueDetailController {
 
     private VueDetailJoueurController vueDetailJoueurController;
     private VueLabelController vueLabelController;
-    private VueBoutonsController vueBoutonsController;
     private CollectionJoueur collection;
     private Joueur joueurActuel;
 
-    public VueDetailController(CollectionJoueur collection, VueDetailJoueurController vueDetailJoueurController, VueLabelController vueLabelController, VueBoutonsController vueBoutonsController){
+    public VueDetailController(CollectionJoueur collection, VueDetailJoueurController vueDetailJoueurController, VueLabelController vueLabelController){
         this.collection = collection;
         this.vueDetailJoueurController = vueDetailJoueurController;
         this.vueLabelController = vueLabelController;
-        this.vueBoutonsController = vueBoutonsController;
     }
     public void afficherJoueur(Joueur joueur){
         joueurActuel = joueur;

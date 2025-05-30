@@ -8,9 +8,8 @@ public class VueLabelController {
     @FXML
     private Label nomJoueur;
 
-    private CollectionJoueur collection;
-    public VueLabelController(CollectionJoueur collection){
-        this.collection = collection;
+    public VueLabelController(){
+
     }
 
     /**

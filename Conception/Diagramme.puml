@@ -1,0 +1,164 @@
+@startuml
+
+package modele {
+  class Joueur {
+    - Set<String> Motcles
+    - String lien_transfermarkt
+    - String prenom
+    - String nom
+    - LocalDate dateNaissance
+    - String position
+    - String nationalite
+    - String club
+    + Set<String> getMotcle()
+    + int getAge()
+    + String getNom()
+    + String getLien()
+    + String getPosition()
+    + String getClub()
+    + String getPrenom()
+  }
+
+  class CollectionJoueur {
+    - List<Joueur> joueurs
+    - Set<String> AllMotCles
+    + Set<String> getAllMotCles()
+    + List<Joueur> getJoueurs()
+    + Joueur getJoueurs(Joueur j)
+    + void removeJoueur(String nom)
+    + void sortByAge()
+    + void sortByName()
+    + int getNbJoueurs()
+    + void ajouterJoueur(Joueur j)
+    + void ajouterMotcle(String mot)
+    + void joueurExiste(Joueur j)
+  }
+
+}
+
+package controleurs {
+
+
+  class ModificateurVue {
+    + void ModificateurVue(Scene sceneglob, Scene sceneDet, Main main)
+    + void afficherGlobale()
+    + void afficherDetaillee()
+    }
+  class VueGlobaleController   {
+    + void VueGlobaleController(Collection collection)
+    + void setMv(ModificateurVue mv)
+  }
+  class VueDetailController{
+  - Joueur joueur
+    + void afficherJoueur(Joueur j)
+    + void precedent()
+    + void suivant()
+  }
+  class VueDetailJoueurController{
+  - CollectionJoueur collection
+  - Joueur joueurActuel
+  +void VueDetailJoueurController(CollectionJoueur collection)
+  +void setJoueur(Joueur j)
+  +Image chargerImage(String image)
+  +void onLien(ActionEvent actionEvent)
+  +void setHostServices(HostServices hostServices)
+  }
+  class VueLabelController{
+   +void VueLabelController()
+   +void setNom(String nom)
+  }
+
+  class VueBoutonsController{
+  + void setVueDetailController(VueDetailController vueDetail)
+    +void setMv(ModificateurVue mv)
+    +void onAccueil(ActionEvent actionEvent)
+    +void onSuivant(ActionEvent actionEvent)
+    +void onPrecedent(ActionEvent actionEvent)
+  }
+
+  class VueEditionController{
+  -CollectionJoueur collection
+  +void VueEditionController(CollectionJoueur collection)
+  +void setVueJoueurController(VueJoueurController controller)
+  +void onAjouter(ActionEvent event)
+  +void onChargerFichier(ActionEvent actionEvent)
+  +void onSauvegarder(ActionEvent actionEvent)
+  +void onStats(ActionEvent actionEvent)
+  }
+  class VueJoueurController{
+    +void VueJoueurController(Collection coll)
+    +void setMv(ModificateurVue mv)
+    +void setVueDetailController(VueDetailController vueDet)
+    +void initialize()
+    +void actualiserListView()
+    +void EcouteurCellule()
+    +void filtreJoueur(String nomJoueur)
+  }
+  class VueRechercheController{
+    +void setVueJoueurController(VueJoueurController vueJoueur)
+    +void initialize()
+  }
+
+  class AddJoueurController{
+  - Set<String> motCleschoisis
+  -ObservableList<String> motClesSet
+  -Stage stage
+  -Joueur joueur
+    +void setData(CollectionJoueur collection,Stage stage)
+    +void setcheminImage(String cheminImage)
+    +void setMotClesSet(Set<String> motcle)
+    +void onImage(ActionEvent actionEvent)
+    +void onAccepter(ActionEvent actionEvent)
+    +void onCancel(ActionEvent actionEvent)
+    +Joueur getJoueur()
+    +boolean verifierEntree()
+    +void onAjouterMotcle(ActionEvent actionEvent)
+    +void onSelection(ActionEvent actionEvent)
+
+  }
+
+  class CompoCell extends ListCell<Joueur>{
+  +void CompoCell(CollectionJoueur coll, VueJoueurController vueJoueur)
+  +void updateItem(Joueur item, boolean empty)
+
+  }
+  class CompoCellController{
+  -Joueur joueur
+  + void setDonnees(CollectionJoueur coll, VueJoueurController vueJoueur)
+  +void setJoueur(Joueur j)
+  +Image chargerImage(String image)
+  + void onSupprimer(ActionEvent actionEvent)
+  +void onModifier(ActionEvent actionEvent)
+
+  }
+
+  class StatsController{
+  +void setData(CollectionJoueur collectionJoueur)
+  +ObservableList<PieChart.Data> paysData()
+  +ObservableList<PieChart.Data> clubData()
+  +ObservableList<PieChart.Data> posteData()
+  +ObservableList<PieChart.Data> motcleData()
+  +void afficherDonnees()
+  }
+
+
+}
+ VueGlobaleController --"1" ModificateurVue
+ VueGlobaleController --"1"CollectionJoueur
+ VueDetailController ---"1" CollectionJoueur
+  VueDetailController --"1" VueDetailJoueurController
+ VueDetailController --"1" VueLabelController
+VueBoutonsController--"1" ModificateurVue
+VueBoutonsController--"1" VueDetailController
+CollectionJoueur --"*" Joueur
+VueEditionController --"1" VueJoueurController
+ VueJoueurController --"1" ModificateurVue
+ VueJoueurController --"1" VueDetailController
+VueRechercheController --"1" VueJoueurController
+AddJoueurController --"1" CollectionJoueur
+CompoCell --"1" CompoCellController
+CompoCellController --"1" CollectionJoueur
+StatsController --"1" CollectionJoueur
+
+
+@enduml
