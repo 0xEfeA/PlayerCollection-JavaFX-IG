@@ -21,5 +21,5 @@ Projet universitaire JavaFX permettant de gérer une collection de joueurs de fo
 - IntelliJ IDEA
 
 ## Vues 
-    ![Accueil](/conception/accueil.png)
-    ![Stats](/conception/stats.png)
+    ![Accueil](Conception/accueil.png)
+    ![Stats](Conception/stats.png)
